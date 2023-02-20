@@ -1,0 +1,39 @@
+<div class="container">
+
+    <form (ngSubmit)="doSubmit()">
+      <div class="card">
+    <h1>Add Customer Details </h1>
+    
+    <mat-form-field appearance="outline" class="field">
+        <mat-label >customer_id</mat-label>
+        <input name="customer_id" [(ngModel)]="data.customer_id" matInput>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="field">
+        <mat-label >customername</mat-label>
+        <input name="customername" [(ngModel)]="data.customername" matInput>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="field">
+        <mat-label >customer_email</mat-label>
+        <input name="customer_email" [(ngModel)]="data.customer_email" matInput>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline"  class="field">
+        <mat-label >phone_no</mat-label>
+        <input type="number" name="phone_no" [(ngModel)]="data.phone_no" matInput>
+      </mat-form-field>
+
+      <div class="buttons" >
+        <button type="submit" mat-raised-button color="primary">
+         Add
+        </button>
+
+        <button type="reset" mat-raised-button color="accent">
+            Reset
+           </button>    
+           </div>
+           {{data|json}}
+      </div>  
+</form>
+</div>
